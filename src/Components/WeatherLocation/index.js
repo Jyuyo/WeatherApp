@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress'
 import './styles.css';
 import Location from './Location';
 import WeatherData from './WeatherData';
@@ -18,7 +19,7 @@ class WeatherLocation extends Component{
     }
 
     componentDidMount(){
-        console.log('componentDidMount')
+        this.handleUpdateClick();
     }
 
     componentDidUpdate(){
@@ -45,9 +46,8 @@ class WeatherLocation extends Component{
             <Location city={city}/>
             {data ? 
             <WeatherData data={data}/> :
-            "Loading..."
+            <CircularProgress size={50}/>
             }
-            <button onClick={this.handleUpdateClick}>Actualizar</button>
         </div>);
 
     }
