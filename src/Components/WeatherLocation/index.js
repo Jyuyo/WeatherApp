@@ -6,8 +6,6 @@ import WeatherData from './WeatherData';
 import PropTypes from 'prop-types';
 import * as WeatherAPIServices from '../../Services/WeatherAPIServices';
 
-const city = 'GDL';
-
 class WeatherLocation extends Component{
 
     constructor(){
@@ -27,7 +25,7 @@ class WeatherLocation extends Component{
     }
 
     handleUpdateClick = () => {
-        const city = 'Guadalajara,mx'
+        const {city} = this.props
         fetch(WeatherAPIServices.getUrlWeatherCity(city)).then(resolve => {
             return resolve.json();
         }).then(data => {

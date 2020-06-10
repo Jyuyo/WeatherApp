@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WeatherData from './PincheCaloronALV';
 
 const WeatherExtraInfo = ({humidity,wind}) => (
     <div className='weatherExtraInfoContainer'>
