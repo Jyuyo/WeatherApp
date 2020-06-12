@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import ForecastExtended from './Components/ForecastExtended'
 
 const cities = [
   'Zapopan,mx',
@@ -52,7 +53,7 @@ class App extends Component {
               <Paper elevation={4}>
                 <div className='details'>
                 {city ?
-                  <span>{city}</span> :
+                  <ForecastExtended city={city}/> :
                   <h5>No hay</h5>
                 }
                 </div>
