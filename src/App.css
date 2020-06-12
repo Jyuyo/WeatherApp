@@ -40,5 +40,17 @@
 .details {
   background-color: #999;
   height: 100vh;
-  width: 100%;
+  width: calc(100% - 40px);
+  overflow: auto;
+  padding-right: 20;
+  padding-left: 20;
+
+}
+
+@media (max-width: 45em)
+{
+    .locationListContainer{
+        max-height: 50vh;
+        overflow: auto;
+    }
 }
