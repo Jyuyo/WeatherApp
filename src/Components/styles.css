@@ -1,0 +1,7 @@
+@media (max-width: 45em)
+{
+    .locationListContainer{
+        max-height: 50vh;
+        overflow: auto;
+    }
+}
