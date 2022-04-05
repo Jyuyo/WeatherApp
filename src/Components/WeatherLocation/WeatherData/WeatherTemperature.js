@@ -21,17 +21,17 @@ const getWeatherIcon = weatherState => {
     return (<WeatherIcons name={icons.sunny} size={iconSize}/>);
 }
 
-const PincheCaloronALV = ({temperature, weatherState}) => (
-    <div className='caloronContainer'>
+const WeatherTemperature = ({temperature, weatherState}) => (
+    <div className='weatherTemperatureContainer'>
         {getWeatherIcon(weatherState)}
         <span className='temperature'>{`${temperature}°C`}</span>
         <span className='temperatureType'>{}</span>
     </div>
 );
 
-PincheCaloronALV.propTypes = {
+WeatherTemperature.propTypes = {
     temperature: PropTypes.number.isRequired,
     weatherState: PropTypes.string.isRequired,
 }
 
-export default PincheCaloronALV;
+export default WeatherTemperature;

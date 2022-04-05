@@ -1,12 +1,12 @@
 import React from 'react';
-import PincheCaloronALV from './PincheCaloronALV';
+import WeatherTemperature from './WeatherTemperature';
 import WeatherExtraInfo from './WeatherExtraInfo';
 import PropTypes from 'prop-types';
 import './styles.css';
 
 const WeatherData = ({data: {temperature, weatherState, humidity, wind}}) => (
     <div className="weatherDataContainer">
-        <PincheCaloronALV temperature = {temperature} weatherState={weatherState}/>
+        <WeatherTemperature temperature = {temperature} weatherState={weatherState}/>
         <WeatherExtraInfo humidity={humidity} wind={wind}/>
     </div>
 );
